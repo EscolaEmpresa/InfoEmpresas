@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Col·laboració amb Empreses - [Nom del teu Centre]</title>
+    
+    <style>
+        /* ====== ESTILS GENERALS ====== */
+        :root {
+            --primary-color: #005a9c; /* Blau corporatiu */
+            --light-bg: #f9f9f9;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            background-color: var(--light-bg);
+            color: #333;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 20px;
+        }
+        h1, h2, h3 { 
+            color: var(--primary-color);
+        }
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        section {
+            padding-top: 60px; /* Espai per evitar que el menú fix el tapi */
+            margin-top: -60px;
+        }
+
+        /* ====== MENÚ DE NAVEGACIÓ ====== */
+        nav {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ====== CAPÇALERA / INTRODUCCIÓ ====== */
+        #introduccio {
+            text-align: center; 
+            padding: 40px 0;
+        }
+
+        /* ====== ESTILS PER A LA SECCIÓ DE MODALITATS ====== */
+        .modalitats-container {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .modalitat-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            width: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .modalitat-card-content {
+            flex-grow: 1;
+        }
+        .modalitat-card h3 {
+            margin-top: 0;
+            border: none;
+        }
+        .modalitat-card ul { padding-left: 20px; }
+        .modalitat-card ul ul { padding-left: 15px; }
+        .modalitat-card li { margin-bottom: 10px; }
+        .ideal-for {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        /* ====== ESTILS PER AL CALENDARI ====== */
+        .table-container { overflow-x: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th { background-color: #f2f2f2; }
+        .lectiu { background-color: #e6e6e6; }
+        .dual-general { background-color: #a7c7e7; color: #fff; font-weight: bold; }
+        .dual-general-flexible { background-color: #d1e3f3; }
+        .dual-intensiva { background-color: #b2e2b2; color: #333; }
+        .dual-intensiva-inici { background-color: #77dd77; color: #fff; font-weight: bold; }
+        .vacances { background: repeating-linear-gradient(45deg, #f2f2f2, #f2f2f2 5px, #fff 5px, #fff 10px); }
+
+        .legend {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .legend-item { display: flex; align-items: center; font-size: 0.85em; }
+        .color-box { width: 15px; height: 15px; margin-right: 8px; border: 1px solid #ccc; }
+
+        /* ====== DISSENY RESPONSIVE PER A MÒBILS ====== */
+        @media (max-width: 768px) {
+            .modalitats-container { flex-direction: column; }
+            .modalitat-card { width: auto; }
+            nav { font-size: 0.9em; }
+            nav a { margin: 0 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#practiques">Opcions de Pràctiques</a>
+        <a href="#ofertes">Publicar Ofertes</a>
+        <a href="#cicles">Els Nostres Cicles</a>
+        <a href="#dual">Beca o Contracte?</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="introduccio">
+            <h1>[Connecta amb el Talent del Futur]</h1>
+            <p style="font-size: 1.1em;">[Benvingut/da a l'espai de col·laboració amb empreses del nostre centre. Aquí trobaràs de manera clara i senzilla totes les opcions per incorporar talent jove al teu equip.]</p>
+        </section>
+        <hr>
+
+        <section id="practiques">
+            <h2>Quines opcions tinc per acollir alumnes en pràctiques?</h2>
+            <p>Tenim dues modalitats principals de pràctiques amb conveni, dissenyades per adaptar-se a les necessitats de la teva empresa i al pla formatiu dels nostres alumnes.</p>
+
+            <div class="modalitats-container">
+                <div class="modalitat-card">
+                    <div class="modalitat-card-content">
+                        <h3>Dual General (abans FCT)</h3>
+                        <p>Una primera presa de contacte amb el món laboral, ideal per a projectes concrets i per conèixer nous talents.</p>
+                        <ul>
+                            <li><strong>Durada:</strong> Unes 515 hores de pràctiques (aproximadament 6 mesos a mitja jornada).</li>
+                            <li><strong>Temporització:</strong> Generalment durant el segon curs de l'alumne.</li>
+                            <li><strong>Cost:</strong> Les pràctiques poden ser no retribuïdes. L'alumne està cobert per l'assegurança escolar (excepte majors de 28 anys).</li>
+                            <li><strong>Gestió:</strong> L'alumne ha d'estar donat d'alta a la Seguretat Social. Excepcionalment, durant el 2025, el centre pot encarregar-se d'aquesta gestió.</li>
+                            <li><strong>Perfil alumne:</strong> Sol ser l'opció per a alumnes que no poden optar a la Dual Intensiva per nota o per horaris.</li>
+                        </ul>
+                    </div>
+                    <div class="ideal-for">
+                        <strong>💡 Ideal per a:</strong> Empreses que volen una col·laboració de curta durada per a tasques o projectes específics i avaluar un possible candidat sense un gran compromís inicial.
+                    </div>
+                </div>
+                <div class="modalitat-card">
+                    <div class="modalitat-card-content">
+                        <h3>Dual Intensiva</h3>
+                        <p>Una aposta estratègica per formar un futur professional a mida, integrant-lo plenament a l'equip.</p>
+                        <ul>
+                            <li><strong>Durada:</strong> Unes 1000 hores de pràctiques a l'empresa.</li>
+                            <li><strong>Temporització:</strong> L'alumne s'incorpora a finals del primer curs i continua durant tot el segon.</li>
+                            <li><strong>Cost:</strong> Les pràctiques són sempre retribuïdes (amb beca o contracte de formació en alternança).</li>
+                            <li><strong>Avantatges Empresa:</strong>
+                                <ul>
+                                    <li>Accés a una preselecció dels millors candidats.</li>
+                                    <li>Temps suficient perquè l'alumne aporti valor real a l'empresa.</li>
+                                    <li>Possibles incentius en la cotització a la Seguretat Social.</li>
+                                    <li>És una via directa per a una futura contractació.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="ideal-for">
+                        <strong>🚀 Ideal per a:</strong> Empreses amb una visió a llarg termini que volen invertir en la formació d'un talent per incorporar-lo a la seva plantilla.
+                    </div>
+                </div>
+            </div>
+            <div id="calendari" style="margin-top: 40px;">
+                <h3>Calendari Típic de les Pràctiques</h3>
+                <p>A continuació es mostren les dues rutes alternatives. L'alumne realitza una de les dues opcions durant el seu segon any.</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Curs / Opció</th>
+                                <th>Set</th><th>Oct</th><th>Nov</th><th>Des</th><th>Gen</th><th>Feb</th><th>Mar</th><th>Abr</th><th>Mai</th><th>Jun</th><th>Jul</th><th>Ago</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1r Curs</strong></td>
+                                <td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td><td class="lectiu"></td>
+                                <td class="dual-intensiva-inici" title="Inici Dual Intensiva"></td>
+                                <td class="dual-intensiva" title="Continuació Dual Intensiva"></td>
+                                <td class="vacances" title="Vacances"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2n Curs (Opció Dual General)</strong></td>
+                                <td class="dual-general" title="Dual General (6 mesos)"></td><td class="dual-general" title="Dual General (6 mesos)"></td><td class="dual-general" title="Dual General (6 mesos)"></td><td class="dual-general" title="Dual General (6 mesos)"></td><td class="dual-general" title="Dual General (6 mesos)"></td><td class="dual-general" title="Dual General (6 mesos)"></td>
+                                <td class="dual-general-flexible" title="Possible inici tardà / Extensió"></td><td class="dual-general-flexible" title="Possible inici tardà / Extensió"></td><td class="dual-general-flexible" title="Possible inici tardà / Extensió"></td><td class="dual-general-flexible" title="Possible inici tardà / Extensió"></td>
+                                <td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2n Curs (Opció Dual Intensiva)</strong></td>
+                                <td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td><td class="dual-intensiva" title="Dual Intensiva"></td>
+                                <td class="vacances" title="Vacances"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="legend">
+                    <span class="legend-item"><span class="color-box lectiu"></span> Curs a l'escola</span>
+                    <span class="legend-item"><span class="color-box dual-general"></span> Període Principal (Dual General)</span>
+                    <span class="legend-item"><span class="color-box dual-general-flexible"></span> Període Flexible (Dual General)</span>
+                    <span class="legend-item"><span class="color-box dual-intensiva-inici"></span> Inici Pràctiques Dual Intensiva</span>
+                    <span class="legend-item"><span class="color-box dual-intensiva"></span> Pràctiques Dual Intensiva</span>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section id="ofertes">
+            <h2>Com puc introduir ofertes a la borsa de treball?</h2>
+            <p>[Aquí anirà la informació sobre com les empreses poden contactar-vos o quin formulari han d'omplir per publicar una oferta a la vostra borsa de treball. Pots explicar el procés pas a pas.]</p>
+            </section>
+        <hr>
+
+        <section id="cicles">
+            <h2>Famílies i cicles impartits en el nostre centre</h2>
+            <p>[Aquest espai és per llistar les famílies professionals (p.ex. Informàtica, Administració, etc.) i els cicles formatius de cadascuna. Podem dissenyar unes targetes visuals per a cada cicle amb les seves competències clau.]</p>
+            </section>
+        <hr>
+
+        <section id="dual">
+            <h2>Dual Intensiva: Què és millor, beca o contracte?</h2>
+            <p>[Aquí podem crear una taula comparativa o dues columnes que expliquin els avantatges, costos i implicacions legals per a l'empresa de triar la modalitat de beca o la de contracte de formació en alternança per a la Dual Intensiva.]</p>
+            </section>
+        </div>
+</body>
+</html>
