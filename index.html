@@ -12,6 +12,8 @@
             --light-bg: #f9f9f9;
             --card-bg: #ffffff;
             --border-color: #e0e0e0;
+            --tip-bg: #fffbe6;
+            --tip-border: #ffc107;
         }
         html {
             scroll-behavior: smooth;
@@ -88,13 +90,17 @@
         .comparison-card ul { padding-left: 20px; }
         .comparison-card ul ul { padding-left: 15px; }
         .comparison-card li { margin-bottom: 10px; }
-        .ideal-for {
+        .ideal-for, .tip-box, .info-box {
             background-color: #f0f7ff;
             border-left: 4px solid var(--primary-color);
             padding: 15px;
             margin-top: 20px;
             border-radius: 4px;
             font-size: 0.9em;
+        }
+        .tip-box {
+            background-color: var(--tip-bg);
+            border-left-color: var(--tip-border);
         }
 
         /* ====== CALENDARI ====== */
@@ -183,6 +189,61 @@
             color: var(--primary-color);
             font-weight: bold;
         }
+        
+        /* ====== SECCIÓ OFERTES DE TREBALL ====== */
+        .step-by-step {
+            list-style-type: none;
+            padding-left: 0;
+            counter-reset: step-counter;
+        }
+        .step-by-step li {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            position: relative;
+            padding-left: 60px;
+        }
+        .step-by-step li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            background-color: var(--primary-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .step-by-step img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+            border: 1px solid var(--border-color);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #003d6b;
+        }
 
         /* ====== DISSENY RESPONSIVE ====== */
         @media (max-width: 768px) {
@@ -197,9 +258,9 @@
 
     <nav>
         <a href="#practiques">Opcions de Pràctiques</a>
-        <a href="#ofertes">Publicar Ofertes</a>
         <a href="#cicles">Els Nostres Cicles</a>
         <a href="#dual">Beca o Contracte?</a>
+        <a href="#ofertes">Publicar Ofertes</a>
     </nav>
 
     <div class="container">
@@ -298,12 +359,6 @@
         </section>
         <hr>
 
-        <section id="ofertes">
-            <h2>Com puc introduir ofertes a la borsa de treball?</h2>
-            <p>[Aquí anirà la informació sobre com les empreses poden contactar-vos o quin formulari han d'omplir per publicar una oferta a la vostra borsa de treball. Pots explicar el procés pas a pas.]</p>
-            </section>
-        <hr>
-
         <section id="cicles">
             <h2>Famílies i cicles impartits en el nostre centre</h2>
             <p>En el nostre centre tenim cicles de quatre famílies diferents, amb una oferta total d'una dotzena de cicles formatius.</p>
@@ -395,7 +450,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ideal-for" style="margin-top: 25px; text-align: center;">
+            <div class="info-box" style="margin-top: 25px; text-align: center;">
                 <p><strong>Nota important:</strong> Aquesta informació és un resum. La normativa pot canviar i sempre recomanem consultar els detalls amb la vostra gestoria de confiança.</p>
             </div>
         </section>
@@ -403,8 +458,44 @@
         
         <section id="ofertes">
             <h2>Com puc introduir ofertes a la borsa de treball?</h2>
-            <p>[Aquí anirà la informació sobre com les empreses poden contactar-vos o quin formulari han d'omplir per publicar una oferta a la vostra borsa de treball. Pots explicar el procés pas a pas.]</p>
-            </section>
+            <p>Per contactar amb exalumnes que ja tenen la titulació, podeu utilitzar la borsa de treball de la nostra web. El procés és el següent:</p>
+            
+            <ol class="step-by-step">
+                <li>
+                    <strong>Registra't a la web (si no tens usuari)</strong><br>
+                    El primer pas és tenir un compte. [cite_start]Ves a la pàgina principal i fes clic a "REGISTRAR-SE", a la cantonada superior dreta. [cite: 5] [cite_start]Omple el formulari i segueix les instruccions del correu que rebràs per activar el compte. [cite: 26]
+                    <img src="Imatges/pas1_registrar.png" alt="Botó per registrar-se a la web de l'escola.">
+                </li>
+                <li>
+                    <strong>Inicia sessió</strong><br>
+                    [cite_start]Un cop registrat, torna a la pàgina principal i fes clic a "ENTRAR" amb el teu nou usuari i contrasenya. [cite: 41]
+                    <img src="Imatges/pas2_entrar.png" alt="Botó per entrar a la web de l'escola.">
+                </li>
+                <li>
+                    <strong>Accedeix a la secció d'ofertes</strong><br>
+                    Un cop dins, veuràs una nova opció al menú: "Ofertes de treball". [cite_start]Fes-hi clic. [cite: 61]
+                    <img src="Imatges/pas3_menu_ofertes.png" alt="Menú de navegació amb l'opció Ofertes de treball.">
+                </li>
+                <li>
+                    <strong>Publica la teva oferta</strong><br>
+                    [cite_start]Busca i prem el botó "INSEREIX OFERTA". [cite: 81] [cite_start]S'obrirà un formulari on podràs introduir totes les dades de la vacant. [cite: 94]
+                    <img src="Imatges/pas4_inserir_oferta.png" alt="Botó per inserir una nova oferta de treball.">
+                </li>
+            </ol>
+
+            <div class="info-box">
+                <h4>Un cop enviada l'oferta...</h4>
+                <ul>
+                    [cite_start]<li><strong>Validació:</strong> L'oferta serà revisada per nosaltres abans de ser pública. [cite: 119] [cite_start]Un cop validada, estarà visible aproximadament un mes. [cite: 119]</li>
+                    <li><strong>Contacte directe:</strong> Els candidats contactaran directament a l'email que indiqueu a l'oferta. [cite_start]L'institut no fa d'intermediari. [cite: 120, 121]</li>
+                    [cite_start]<li><strong>Consell:</strong> Afegeix detalls suficients (tasques, requisits, horari...) per fer un bon filtre de candidats. [cite: 95] [cite_start]Si pots, puja el logo de la teva empresa per a una millor presentació. [cite: 97]</li>
+                    [cite_start]<li><strong>Notifica'ns!</strong> Si us plau, avisa el coordinador de pràctiques quan hagis publicat l'oferta, ja que el sistema no envia notificacions automàtiques. [cite: 121]</li>
+                </ul>
+            </div>
+
+            <a href="[URL_A_LA_BORSA_DE_TREBALL]" class="cta-button">Anar a la Borsa de Treball</a>
+
+        </section>
         </div>
 </body>
 </html>
