@@ -68,6 +68,9 @@
             text-align: center; 
             padding: 40px 0;
         }
+        #introduccio p {
+            text-align: justify;
+        }
 
         /* ====== SECCIONS COMPARATIVES (PRÀCTIQUES I DUAL) ====== */
         .comparison-container {
@@ -162,6 +165,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .family-card li:last-child {
             border-bottom: none;
@@ -175,9 +179,17 @@
             font-size: 0.8em;
             transition: background-color 0.3s;
             white-space: nowrap;
+            margin-left: 10px;
         }
         .cycle-link:hover {
             background-color: #003d6b;
+        }
+        .no-dual-note {
+            font-size: 0.8em;
+            color: #777;
+            font-style: italic;
+            width: 100%;
+            padding-top: 4px;
         }
         .pfi-section {
             margin-top: 40px;
@@ -268,7 +280,7 @@
         
         <section id="introduccio">
             <h1>Gràcies per Ajudar-nos a Formar el Futur Professional</h1>
-            <p style="font-size: 1.1em;">
+            <p style="font-size: 1.1em; text-align: justify;">
                 En nom de l'Institut Escola Industrial, us volem agrair el vostre interès. La formació pràctica és un pilar fonamental en el desenvolupament dels nostres alumnes, i la vostra participació és clau per convertir-los en els professionals qualificats que el sector necessita. Aquesta pàgina està dissenyada per explicar-vos de manera clara totes les opcions de col·laboració amb el nostre centre.
             </p>
         </section>
@@ -276,7 +288,7 @@
 
         <section id="practiques">
             <h2>Quines opcions tinc per acollir alumnes en pràctiques?</h2>
-            <p>Tenim dues modalitats principals de pràctiques amb conveni, dissenyades per adaptar-se a les necessitats de la teva empresa i al pla formatiu dels nostres alumnes.</p>
+            <p>Tenim dues modalitats principals de pràctiques amb conveni, dissenyades per adaptar-se a les necessitats de la vostra empresa i al pla formatiu dels nostres alumnes.</p>
 
             <div class="comparison-container">
                 <div class="comparison-card">
@@ -365,6 +377,9 @@
         <section id="cicles">
             <h2>Famílies i cicles impartits en el nostre centre</h2>
             <p>En el nostre centre tenim cicles de quatre famílies diferents, amb una oferta total d'una dotzena de cicles formatius.</p>
+            <div class="info-box">
+                <p>ℹ️ Els enllaços "Més info" de cada cicle porten a un document PDF amb un llistat de les <strong>activitats típiques</strong> que els alumnes poden realitzar a l'empresa. No és necessari que les realitzin totes, però la majoria de les tasques assignades haurien de formar part d'aquesta llista.</p>
+            </div>
             <div class="families-container">
                 <div class="family-card">
                     <div class="family-card-header">
@@ -372,10 +387,22 @@
                         <a href="https://www.youtube.com/watch?v=HHQTlZMk-JI" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
                     </div>
                     <ul>
-                        <li>CFGM Gestió Administrativa <span><a href="Plans Activitats/PA_AG10_Gestio_Administrativa.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGM Gestió Administrativa (Àmbit Jurídic) <span><a href="Plans Activitats/PA_AG11_Gestio_Administrativa_Ambit_Juridic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Administració i Finances <span><a href="Plans Activitats/PA_AGB0_Administracio_i_Finances.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Administració i Finances (Assegurances) <span><a href="Plans Activitats/PA_AGB1_Administracio_i_Finances_Assegurances.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>
+                            <div>CFGM Gestió Administrativa</div>
+                            <span><a href="Plans Activitats/PA_AG10_Gestio_Administrativa.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGM Gestió Administrativa (Àmbit Jurídic)<span class="no-dual-note">(Només Dual General)</span></div>
+                            <span><a href="Plans Activitats/PA_AG11_Gestio_Administrativa_Ambit_Juridic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGS Administració i Finances</div>
+                            <span><a href="Plans Activitats/PA_AGB0_Administracio_i_Finances.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGS Administració i Finances (Assegurances)</div>
+                            <span><a href="Plans Activitats/PA_AGB1_Administracio_i_Finances_Assegurances.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
                     </ul>
                 </div>
                 <div class="family-card">
@@ -384,9 +411,18 @@
                         <a href="https://www.youtube.com/watch?v=l1KPiU20kMI" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
                     </div>
                     <ul>
-                        <li>CFGM Mecanització <span><a href="Plans Activitats/PA_FM20_Mecanitzacio.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Disseny en Fabricació Mecànica <span><a href="Plans Activitats/PA_FMCD_Disseny_en_Fabricacio_mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Programació de la Producció <span><a href="Plans Activitats/PA_FM80_Programacio_Produccio_Fabricacio_Mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>
+                            <div>CFGM Mecanització</div>
+                            <span><a href="Plans Activitats/PA_FM20_Mecanitzacio.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGS Disseny en Fabricació Mecànica</div>
+                            <span><a href="Plans Activitats/PA_FMCD_Disseny_en_Fabricacio_mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGS Programació de la Producció</div>
+                            <span><a href="Plans Activitats/PA_FM80_Programacio_Produccio_Fabricacio_Mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
                     </ul>
                 </div>
                 <div class="family-card">
@@ -395,9 +431,18 @@
                         <a href="https://www.youtube.com/watch?v=4W-jbIQn6zY" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
                     </div>
                     <ul>
-                        <li>CFGM Fusteria i Moble <span><a href="Plans Activitats/PA_FS10_Fusteria_i_Moble.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGM Instal·lació i Moblament <span><a href="Plans Activitats/PA_FS20_Instal_lacio_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Disseny i Moblament <span><a href="Plans Activitats/PA_FSA0_Disseny_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>
+                            <div>CFGM Fusteria i Moble<span class="no-dual-note">(Només Dual General)</span></div>
+                            <span><a href="Plans Activitats/PA_FS10_Fusteria_i_Moble.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGM Instal·lació i Moblament</div>
+                            <span><a href="Plans Activitats/PA_FS20_Instal_lacio_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGS Disseny i Moblament</div>
+                            <span><a href="Plans Activitats/PA_FSA0_Disseny_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
                     </ul>
                 </div>
                 <div class="family-card">
@@ -406,8 +451,14 @@
                         <a href="https://www.youtube.com/watch?v=tH0t47yDzYk" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
                     </div>
                     <ul>
-                        <li>CFGM Manteniment Electromecànic <span><a href="Plans Activitats/PA_IM10_Manteniment_Electromecanic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Mecatrònica Industrial <span><a href="Plans Activitats/PA_IMC0_Mecatronica_Industrial.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>
+                            <div>CFGM Manteniment Electromecànic</div>
+                            <span><a href="Plans Activitats/PA_IM10_Manteniment_Electromecanic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
+                        <li>
+                            <div>CFGS Mecatrònica Industrial</div>
+                            <span><a href="Plans Activitats/PA_IMC0_Mecatronica_Industrial.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -462,11 +513,10 @@
         <section id="ofertes">
             <h2>Com puc introduir ofertes a la borsa de treball?</h2>
             <p>Per contactar amb <strong>exalumnes</strong> que ja tenen la titulació, podeu utilitzar la borsa de treball de la nostra web.</p>
-            
             <div class="info-box">
                 <p>ℹ️ <strong>Important:</strong> Aquesta secció és exclusivament per a ofertes de treball dirigides a <strong>exalumnes</strong>. Per a ofertes de pràctiques per a alumnes actuals, consulteu la secció <a href="#practiques">d'Opcions de Pràctiques</a>.</p>
             </div>
-
+            
             <ol class="step-by-step">
                 <li>
                     <strong>Registreu-vos a la web (si no teniu usuari)</strong><br>
