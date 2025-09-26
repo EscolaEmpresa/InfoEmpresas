@@ -67,7 +67,7 @@
             padding: 40px 0;
         }
 
-        /* ====== ESTILS PER A LA SECCIÓ DE MODALITATS ====== */
+        /* ====== SECCIÓ MODALITATS DE PRÀCTIQUES ====== */
         .modalitats-container {
             display: flex;
             gap: 25px;
@@ -83,13 +83,8 @@
             display: flex;
             flex-direction: column;
         }
-        .modalitat-card-content {
-            flex-grow: 1;
-        }
-        .modalitat-card h3 {
-            margin-top: 0;
-            border: none;
-        }
+        .modalitat-card-content { flex-grow: 1; }
+        .modalitat-card h3 { margin-top: 0; border: none; }
         .modalitat-card ul { padding-left: 20px; }
         .modalitat-card ul ul { padding-left: 15px; }
         .modalitat-card li { margin-bottom: 10px; }
@@ -102,19 +97,10 @@
             font-size: 0.9em;
         }
 
-        /* ====== ESTILS PER AL CALENDARI ====== */
+        /* ====== CALENDARI ====== */
         .table-container { overflow-x: auto; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 0.9em;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9em; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
         th { background-color: #f2f2f2; }
         .lectiu { background-color: #e6e6e6; }
         .dual-general { background-color: #a7c7e7; color: #fff; font-weight: bold; }
@@ -122,18 +108,64 @@
         .dual-intensiva { background-color: #b2e2b2; color: #333; }
         .dual-intensiva-inici { background-color: #77dd77; color: #fff; font-weight: bold; }
         .vacances { background: repeating-linear-gradient(45deg, #f2f2f2, #f2f2f2 5px, #fff 5px, #fff 10px); }
-
-        .legend {
-            margin-top: 15px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+        .legend { margin-top: 15px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
         .legend-item { display: flex; align-items: center; font-size: 0.85em; }
         .color-box { width: 15px; height: 15px; margin-right: 8px; border: 1px solid #ccc; }
+        
+        /* ====== SECCIÓ: FAMÍLIES I CICLES ====== */
+        .families-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .family-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .family-card h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .family-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .family-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .family-card li:last-child {
+            border-bottom: none;
+        }
+        .cycle-link {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.8em;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        .cycle-link:hover {
+            background-color: #003d6b;
+        }
+        .pfi-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+        }
 
-        /* ====== DISSENY RESPONSIVE PER A MÒBILS ====== */
+        /* ====== DISSENY RESPONSIVE ====== */
         @media (max-width: 768px) {
             .modalitats-container { flex-direction: column; }
             .modalitat-card { width: auto; }
@@ -169,7 +201,7 @@
                         <h3>Dual General (abans FCT)</h3>
                         <p>Una primera presa de contacte amb el món laboral, ideal per a projectes concrets i per conèixer nous talents.</p>
                         <ul>
-                            <li><strong>Durada:</strong> Unes 515 hores de pràctiques (aproximadament 6 mesos a mitja jornada).</li>
+                            <li><strong>Durada:</strong> Unes 515 hores de pràctiques (aproximament 6 mesos a mitja jornada).</li>
                             <li><strong>Temporització:</strong> Generalment durant el segon curs de l'alumne.</li>
                             <li><strong>Cost:</strong> Les pràctiques poden ser no retribuïdes. L'alumne està cobert per l'assegurança escolar (excepte majors de 28 anys).</li>
                             <li><strong>Gestió:</strong> L'alumne ha d'estar donat d'alta a la Seguretat Social. Excepcionalment, durant el 2025, el centre pot encarregar-se d'aquesta gestió.</li>
@@ -255,8 +287,50 @@
 
         <section id="cicles">
             <h2>Famílies i cicles impartits en el nostre centre</h2>
-            <p>[Aquest espai és per llistar les famílies professionals (p.ex. Informàtica, Administració, etc.) i els cicles formatius de cadascuna. Podem dissenyar unes targetes visuals per a cada cicle amb les seves competències clau.]</p>
-            </section>
+            <p>En el nostre centre tenim cicles de quatre famílies diferents, amb una oferta total d'una dotzena de cicles formatius.</p>
+            <div class="families-container">
+                <div class="family-card">
+                    <h3>Administració i Gestió</h3>
+                    <ul>
+                        <li>CFGM Gestió Administrativa <span><a href="PA_AG10_Gestio_Administrativa.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGM Gestió Administrativa (Àmbit Jurídic) <span><a href="PA_AG11_Gestio_Administrativa_Ambit_Juridic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Administració i Finances <span><a href="PA_AGB0_Administracio_i_Finances.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Administració i Finances (Assegurances) <span><a href="PA_AGB1_Administracio_i_Finances_Assegurances.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                    </ul>
+                </div>
+                <div class="family-card">
+                    <h3>Fabricació Mecànica</h3>
+                    <ul>
+                        <li>CFGM Mecanització <span><a href="PA_FM20_Mecanitzacio.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Disseny en Fabricació Mecànica <span><a href="PA_FMCD_Disseny_en_Fabricacio_mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Programació de la Producció <span><a href="PA_FM80_Programacio_Produccio_Fabricacio_Mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                    </ul>
+                </div>
+                <div class="family-card">
+                    <h3>Fusta, Moble i Suro</h3>
+                    <ul>
+                        <li>CFGM Fusteria i Moble <span><a href="PA_FS10_Fusteria_i_Moble.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGM Instal·lació i Moblament <span><a href="PA_FS20_Instal_lacio_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Disseny i Moblament <span><a href="PA_FSA0_Disseny_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                    </ul>
+                </div>
+                <div class="family-card">
+                    <h3>Instal·lació i Manteniment</h3>
+                    <ul>
+                        <li>CFGM Manteniment Electromecànic <span><a href="PA_IM10_Manteniment_Electromecanic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Mecatrònica Industrial <span><a href="PA_IMC0_Mecatronica_Industrial.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pfi-section">
+                <h3>Programes de Formació i Inserció (PFI)</h3>
+                <p>A més dels cicles formatius, també disposem de dos programes d'accés inicial al món laboral:</p>
+                <ul>
+                    <li>Auxiliar d'Activitats d'Oficina i en Serveis Administratius Generals</li>
+                    <li>Auxiliar en Treballs de Fusteria i Instal·lació de Mobles</li>
+                </ul>
+            </div>
+        </section>
         <hr>
 
         <section id="dual">
