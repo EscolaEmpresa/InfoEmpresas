@@ -67,13 +67,13 @@
             padding: 40px 0;
         }
 
-        /* ====== SECCIÓ MODALITATS DE PRÀCTIQUES ====== */
-        .modalitats-container {
+        /* ====== SECCIONS COMPARATIVES (PRÀCTIQUES I DUAL) ====== */
+        .comparison-container {
             display: flex;
             gap: 25px;
             margin-top: 20px;
         }
-        .modalitat-card {
+        .comparison-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -83,11 +83,11 @@
             display: flex;
             flex-direction: column;
         }
-        .modalitat-card-content { flex-grow: 1; }
-        .modalitat-card h3 { margin-top: 0; border: none; }
-        .modalitat-card ul { padding-left: 20px; }
-        .modalitat-card ul ul { padding-left: 15px; }
-        .modalitat-card li { margin-bottom: 10px; }
+        .comparison-card-content { flex-grow: 1; }
+        .comparison-card h3 { margin-top: 0; border: none; }
+        .comparison-card ul { padding-left: 20px; }
+        .comparison-card ul ul { padding-left: 15px; }
+        .comparison-card li { margin-bottom: 10px; }
         .ideal-for {
             background-color: #f0f7ff;
             border-left: 4px solid var(--primary-color);
@@ -186,8 +186,8 @@
 
         /* ====== DISSENY RESPONSIVE ====== */
         @media (max-width: 768px) {
-            .modalitats-container { flex-direction: column; }
-            .modalitat-card { width: auto; }
+            .comparison-container { flex-direction: column; }
+            .comparison-card { width: auto; }
             nav { font-size: 0.9em; }
             nav a { margin: 0 8px; }
         }
@@ -214,9 +214,9 @@
             <h2>Quines opcions tinc per acollir alumnes en pràctiques?</h2>
             <p>Tenim dues modalitats principals de pràctiques amb conveni, dissenyades per adaptar-se a les necessitats de la teva empresa i al pla formatiu dels nostres alumnes.</p>
 
-            <div class="modalitats-container">
-                <div class="modalitat-card">
-                    <div class="modalitat-card-content">
+            <div class="comparison-container">
+                <div class="comparison-card">
+                    <div class="comparison-card-content">
                         <h3>Dual General (abans FCT)</h3>
                         <p>Una primera presa de contacte amb el món laboral, ideal per a projectes concrets i per conèixer nous talents.</p>
                         <ul>
@@ -231,8 +231,8 @@
                         <strong>💡 Ideal per a:</strong> Empreses que volen una col·laboració de curta durada per a tasques o projectes específics i avaluar un possible candidat sense un gran compromís inicial.
                     </div>
                 </div>
-                <div class="modalitat-card">
-                    <div class="modalitat-card-content">
+                <div class="comparison-card">
+                    <div class="comparison-card-content">
                         <h3>Dual Intensiva</h3>
                         <p>Una aposta estratègica per formar un futur professional a mida, integrant-lo plenament a l'equip.</p>
                         <ul>
@@ -349,7 +349,7 @@
                     </div>
                     <ul>
                         <li>CFGM Manteniment Electromecànic <span><a href="Plans Activitats/PA_IM10_Manteniment_Electromecanic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
-                        <li>CFGS Mecatrònica Industrial <span><a href="Plans Activitats/PA_IMC0_Mecanica_Industrial.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
+                        <li>CFGS Mecatrònica Industrial <span><a href="Plans Activitats/PA_IMC0_Mecatronica_Industrial.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
                     </ul>
                 </div>
             </div>
@@ -366,7 +366,44 @@
 
         <section id="dual">
             <h2>Dual Intensiva: Què és millor, beca o contracte?</h2>
-            <p>[Aquí podem crear una taula comparativa o dues columnes que expliquin els avantatges, costos i implicacions legals per a l'empresa de triar la modalitat de beca o la de contracte de formació en alternança per a la Dual Intensiva.]</p>
+            <p>La modalitat Dual Intensiva implica una inversió per part de l'empresa. Les dues figures principals per formalitzar un nou acord són la beca o el contracte de formació en alternança. A continuació, detallem les diferències clau.</p>
+            
+            <div class="comparison-container">
+                <div class="comparison-card">
+                    <div class="comparison-card-content">
+                        <h3>🎓 Opció Beca</h3>
+                        <ul>
+                            <li><strong>Relació:</strong> No és un contracte laboral. L'alumne no pot substituir un treballador i el rol del tutor d'empresa té més pes.</li>
+                            <li><strong>Cost per a l'empresa:</strong> S'abona una "ajuda a l'estudi", no un sou. L'import mínim depèn del Salari Mínim (SMI) i del tipus de cicle (aprox. 4,74 €/h per a GM i 6,16 €/h per a GS, a data de 2025).</li>
+                            <li><strong>Bonificacions:</strong> L'alta a la Seguretat Social està <strong>bonificada al 95%</strong>.</li>
+                            <li><strong>Contractació posterior:</strong> No hi ha <strong>cap incentiu</strong> addicional per a l'empresa si decideix contractar l'alumne en finalitzar la beca.</li>
+                            <li><strong>Limitacions:</strong> No es pot formalitzar una beca si l'alumne ja ha tingut un contracte previ amb la mateixa empresa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-card-content">
+                        <h3>✍️ Opció Contracte de Formació en Alternança</h3>
+                        <ul>
+                            <li><strong>Relació:</strong> És un contracte laboral. L'alumne és considerat un treballador més, amb major cobertura legal.</li>
+                            <li><strong>Cost per a l'empresa:</strong> S'abona un sou segons el conveni col·lectiu (mínim el 60%, mai inferior a l'SMI). El cost és superior al de la beca.</li>
+                            <li><strong>Bonificacions:</strong> La Seguretat Social de l'empresa està <strong>bonificada al 100%</strong> (si l'alumne està inscrit com a demandant d'ocupació).</li>
+                            <li><strong>Contractació posterior:</strong> ✅ **Gran avantatge:** Si l'empresa fa fix a l'alumne, pot rebre una bonificació de <strong>1.500 €/any</strong> durant 3 anys (o <strong>1.800 €/any</strong> si és una dona).</li>
+                            <li><strong>Avantatges addicionals:</strong> Menys problemes davant d'inspeccions de treball en ser una relació laboral estàndard.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ideal-for" style="margin-top: 25px; text-align: center;">
+                <p><strong>Nota important:</strong> Aquesta informació és un resum. La normativa pot canviar i sempre recomanem consultar els detalls amb la vostra gestoria de confiança.</p>
+            </div>
+        </section>
+        <hr>
+        
+        <section id="ofertes">
+            <h2>Com puc introduir ofertes a la borsa de treball?</h2>
+            <p>[Aquí anirà la informació sobre com les empreses poden contactar-vos o quin formulari han d'omplir per publicar una oferta a la vostra borsa de treball. Pots explicar el procés pas a pas.]</p>
             </section>
         </div>
 </body>
