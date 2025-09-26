@@ -126,10 +126,25 @@
             padding: 25px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .family-card h3 {
-            margin-top: 0;
-            padding-bottom: 10px;
+        .family-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 2px solid var(--border-color);
+            margin-bottom: 10px;
+        }
+        .family-card h3 {
+            margin: 0;
+            padding-bottom: 10px;
+            border: none;
+        }
+        .video-link {
+            text-decoration: none;
+            font-size: 1.6em;
+            transition: transform 0.2s;
+        }
+        .video-link:hover {
+            transform: scale(1.2);
         }
         .family-card ul {
             list-style: none;
@@ -290,7 +305,10 @@
             <p>En el nostre centre tenim cicles de quatre famílies diferents, amb una oferta total d'una dotzena de cicles formatius.</p>
             <div class="families-container">
                 <div class="family-card">
-                    <h3>Administració i Gestió</h3>
+                    <div class="family-card-header">
+                        <h3>Administració i Gestió</h3>
+                        <a href="https://www.youtube.com/watch?v=HHQTlZMk-JI" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
+                    </div>
                     <ul>
                         <li>CFGM Gestió Administrativa <span><a href="Plans Activitats/PA_AG10_Gestio_Administrativa.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
                         <li>CFGM Gestió Administrativa (Àmbit Jurídic) <span><a href="Plans Activitats/PA_AG11_Gestio_Administrativa_Ambit_Juridic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
@@ -299,7 +317,10 @@
                     </ul>
                 </div>
                 <div class="family-card">
-                    <h3>Fabricació Mecànica</h3>
+                    <div class="family-card-header">
+                        <h3>Fabricació Mecànica</h3>
+                        <a href="https://www.youtube.com/watch?v=l1KPiU20kMI" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
+                    </div>
                     <ul>
                         <li>CFGM Mecanització <span><a href="Plans Activitats/PA_FM20_Mecanitzacio.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
                         <li>CFGS Disseny en Fabricació Mecànica <span><a href="Plans Activitats/PA_FMCD_Disseny_en_Fabricacio_mecanica.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
@@ -307,7 +328,10 @@
                     </ul>
                 </div>
                 <div class="family-card">
-                    <h3>Fusta, Moble i Suro</h3>
+                    <div class="family-card-header">
+                        <h3>Fusta, Moble i Suro</h3>
+                        <a href="https://www.youtube.com/watch?v=4W-jbIQn6zY" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
+                    </div>
                     <ul>
                         <li>CFGM Fusteria i Moble <span><a href="Plans Activitats/PA_FS10_Fusteria_i_Moble.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
                         <li>CFGM Instal·lació i Moblament <span><a href="Plans Activitats/PA_FS20_Instal_lacio_i_Moblament.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
@@ -315,7 +339,10 @@
                     </ul>
                 </div>
                 <div class="family-card">
-                    <h3>Instal·lació i Manteniment</h3>
+                    <div class="family-card-header">
+                        <h3>Instal·lació i Manteniment</h3>
+                        <a href="https://www.youtube.com/watch?v=tH0t47yDzYk" target="_blank" rel="noopener noreferrer" class="video-link" title="Veure vídeo de la família">🎥</a>
+                    </div>
                     <ul>
                         <li>CFGM Manteniment Electromecànic <span><a href="Plans Activitats/PA_IM10_Manteniment_Electromecanic.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
                         <li>CFGS Mecatrònica Industrial <span><a href="Plans Activitats/PA_IMC0_Mecatronica_Industrial.pdf" class="cycle-link" target="_blank" rel="noopener noreferrer">Més info</a></span></li>
