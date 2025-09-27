@@ -69,18 +69,27 @@
         }
         .faq-item { margin-bottom: 15px; }
         .faq-item strong { display: block; }
-        .costs-table {
+        .costs-table, .receipt-table {
             width: 100%;
             margin-top: 15px;
             border-collapse: collapse;
             font-size: 0.9em;
         }
-        .costs-table th, .costs-table td {
+        .costs-table th, .costs-table td, .receipt-table th, .receipt-table td {
             border: 1px solid #ccc;
             padding: 8px;
             text-align: left;
+            vertical-align: top;
         }
-        .costs-table th {
+        .costs-table th, .receipt-table th {
+            background-color: #f2f2f2;
+        }
+        .receipt-table td {
+            height: 40px;
+        }
+        .receipt-table .section-title {
+            text-align: center;
+            font-weight: bold;
             background-color: #f2f2f2;
         }
     </style>
@@ -182,17 +191,21 @@
             <p>Abans de formalitzar l'acord, el centre i l'empresa han d'establir un <strong>conveni de col·laboració</strong>, vàlid durant 4 anys. Després de tenir el conveni signat digitalment, es pot donar pas a la creació de l'acord i el pla d'activitats. Hi ha exemples dels models al final d'aquesta pàgina.</p>
 
             <h3>6. Donar d'alta l'alumnat becari a la Seguretat Social</h3>
-            <p>Els becaris estan assimilats al Règim General. Si l'empresa no té treballadors, l'alta és amb el <a href="https://www.seg-social.es/wps/portal/wss/internet/Empresarios/Inscripcion/10929/31193" target="_blank" rel="noopener noreferrer">Model TA-6</a>. Si ja té treballadors, s'ha de fer amb el model TA-7, creant un nou compte de cotització per a becaris (codi TRL 986, col·lectiu 9939 Pràctiques formatives remunerades).</p>
+            <p>Els becaris estan assimilats al Règim General. Si l’empresa no té treballadors, l’alta és amb el <a href="https://www.seg-social.es/wps/portal/wss/internet/Empresarios/Inscripcion/10929/31193" target="_blank" rel="noopener noreferrer">Model TA-6</a>. Si l’empresa ja té treballadors, s’ha de fer amb el model TA-7, creant un nou compte de cotització per a becaris (Codi de compte secundari TRL 986 i col·lectiu específic 9939 Pràctiques formatives remunerades).</p>
             <blockquote>Cap alumne no pot iniciar una estada de formació dual en una entitat abans que les parts signin el conveni i l'acord formatiu individual corresponents, ni abans que es facin les gestions davant la Seguretat Social.</blockquote>
-            <p>La data de finalització a l'acord és aproximada. En arribar a les 1000 hores, l'acord s'hauria de tancar per poder avaluar l'alumne. Immediatament després, l'alumne pot ser contractat per l'empresa amb un **contracte formatiu per a l'obtenció de la pràctica professional**.</p>
+            <p>Quan es fa l’acord, la data de finalització és aproximada. En arribar a les 1000 hores l’alumne ja tindrà les hores suficients, amb el que l’acord ja s’hauria de tancar per poder avaluar l’alumne. Immediatament després, l'alumne pot ser contractat amb un **contracte formatiu per a l'obtenció de la pràctica professional**.</p>
             
             <h3>7. Gestionar administrativament la relació en beca</h3>
             <h4>7.1 Gestió econòmica i a la Seguretat Social</h4>
-            <p>L'import de la beca no pot ser inferior a un percentatge de l'SMI, tal com regula la <a href="https://dogc.gencat.cat/ca/document-del-dogc/?documentId=991073" target="_blank" rel="noopener noreferrer">RESOLUCIÓ EDU/2717/2024</a>:</p>
+            <p>Al ser una relació formativa i no laboral, no està regulada per l'Estatut dels Treballadors, ni pel conveni col·lectiu de l'empresa. L'import de la beca el fixa la comissió de seguiment del conveni, respectant els mínims legals basats en l'SMI, tal com regula la <a href="https://dogc.gencat.cat/ca/document-del-dogc/?documentId=991073" target="_blank" rel="noopener noreferrer">RESOLUCIÓ EDU/2717/2024</a>:</p>
             <ul>
                 <li><strong>Grau Mitjà:</strong> 50% de l'SMI.</li>
                 <li><strong>Grau Superior:</strong> 60% la primera meitat, 70% la segona. Es recomana un 65% constant.</li>
             </ul>
+            <p>L'alumnat aprenent ha de rebre mensualment aquesta compensació en un rebut expedit per l'empresa on consti la percepció, les cotitzacions a la SS i, si s'escau, la retenció d'IRPF.</p>
+            <blockquote>Càlcul del preu/hora de la beca (exemple amb 1750h anuals de conveni):<br>
+            SMI ANUAL 2024: 16.576€ (1.184€ x 14 pagues prorratejades)<br>
+            Preu hora base = 16.576€ / 1.750h = 9.47 €/hora</blockquote>
             <a href="https://script.google.com/a/macros/escolaindustrial.org/s/AKfycbwTcgXhO5hfWw_bRbGXUSuMCvYiW8pCP_rHX9JOthdhxnbGfdRNuf0iA4V7z12VC_FrDA/exec" target="_blank" rel="noopener noreferrer" class="cta-button">Calculadora Interactiva de Costos</a>
             
             <div class="warning-box">
@@ -230,11 +243,66 @@
                 </table>
             </div>
             
-            <h4>7.2 Gestionar la Prevenció de Riscos Laborals</h4>
-            <p>L'empresa ha de donar la formació en PRL específica del lloc de treball. Tots els nostres alumnes han superat les 35 hores de la unitat formativa de PRL.</p>
+            <h4>Exemple de Rebut d'Aportació Econòmica</h4>
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">DOCUMENT D'APORTACIÓ ECONÒMICA - BECA FORMATIVA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nom i cognoms de l'alumne aprenent:</strong></td>
+                        <td><strong>Nom de l'empresa:</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>NIF/NIE:</strong></td>
+                        <td><strong>CCC:</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>NASS:</strong></td>
+                        <td><strong>CIF:</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Categoria:</strong> becari en formació</td>
+                        <td><strong>Domicili:</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grup de cotització:</strong> 10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>Mes:</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="section-title">BECA FP DUAL:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="section-title">Aportacions a la Seguretat Social (Contingències Comunes)/AT i EP:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="section-title">RETENCIÓ % IRPF</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="section-title">TOTAL A PERCEBRE</td>
+                    </tr>
+                    <tr>
+                        <td><br><br><strong>Signatura i segell de l'empresa</strong></td>
+                        <td><br><br><strong>Signatura de l'aprenent</strong></td>
+                    </tr>
+                </tbody>
+            </table>
             
-            <h4>7.3 Gestionar Baixes (ILT)</h4>
-            <p>La persona becària té el mateix dret a rebre prestacions per baixa que la resta de treballadors. <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10938/36537/36538" target="_blank" rel="noopener noreferrer">Més informació a la web de la Seguretat Social.</a></p>
+            <h4>7.2 Gestionar la Prevenció de Riscos Laborals</h4>
+            <p>Com que la beca no es considera una relació laboral no li és aplicable la Llei de Prevenció de Riscs Laborals, però sí la normativa de seguretat i higiene. L'empresa ha de donar la formació específica i adient al lloc de treball que l'aprenent ocuparà al llarg de la seva estada com si fos un treballador. Els alumnes han d'assolir les competències necessàries per a l'obtenció del títol de Tècnic Bàsic en Prevenció de Riscos Laborals, abans de començar les pràctiques. Si és menor d'edat l'empresa haurà d'assegurar-se que no es tracti d'una activitat prohibida segons el Decret de 26 de juliol de 1957.</p>
+            
+            <h4>7.3 Gestionar Baixes, Incapacitat Laboral Transitòria (ILT)</h4>
+            <p>La persona becària té el mateix dret a rebre prestacions per baixa que la resta de treballadors. En resum:</p>
+            <ul>
+                <li><strong>Malaltia comuna / Accident no laboral:</strong> 60% de la base reguladora (dies 4-20) i 75% (des del dia 21). Requereix 180 dies cotitzats prèviament.</li>
+                <li><strong>Accident de treball / Malaltia professional:</strong> 75% de la base reguladora des del dia següent a la baixa.</li>
+            </ul>
+            <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10938/36537/36538" target="_blank" rel="noopener noreferrer">Més informació a la web de la Seguretat Social.</a>
 
             <h3>8. Incidències durant la beca formativa</h3>
             <p>La comunicació constant entre tutors és clau. En cas de conflicte, es pot rescindir la beca, documentant el procés. L'alumne s'incorporaria de nou al centre.</p>
