@@ -69,6 +69,20 @@
         }
         .faq-item { margin-bottom: 15px; }
         .faq-item strong { display: block; }
+        .costs-table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+        .costs-table th, .costs-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .costs-table th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +124,6 @@
             <p>Els 5 primers passos els gestiona principalment el centre educatiu.</p>
             
             <h3>1. Verificar que l'aprenent compleix els requisits mínims</h3>
-            <p>S'ha de verificar que l'aprenent compleix els requisits mínims i si rep prestacions o subsidis. Aquests requisits són:</p>
             <ul>
                 <li>Estar matriculat al centre. L'edat mínima és de 17 anys (no hi ha màxima).</li>
                 <li>Complir requisits acadèmics i/o l'aprovació de l'equip docent.</li>
@@ -133,11 +146,9 @@
             <h4>Descansos</h4>
             <ul>
                 <li><strong>Entre jornades:</strong> Cal vetllar per un descans mínim de 12 hores. A la nostra escola els alumnes de dual finalitzen en horaris diferents depenent del cicle, per tant s'ha de parlar amb el tutor l'hora d'inici.</li>
-                <li><strong>Descans setmanal:</strong> 1,5 dies de descans a la setmana com a mínim (2 si són menors d'edat). Dissabte i diumenge no estan habilitats en general, però es pot demanar excepcionalment el dissabte.</li>
-                <li><strong>Descans anual:</strong> Almenys 31 dies de descans dins d'un període de 12 mesos; d'aquests 31 dies, almenys 15 han de ser consecutius i han de coincidir amb dies no lectius. En el nostre cas el mes d'agost és de descans, amb el que ja es compliria.</li>
+                <li><strong>Descans setmanal:</strong> 1,5 dies de descans a la setmana com a mínim (2 si són menors d'edat). Dissabte i diumenge no estan habilitats en general.</li>
+                <li><strong>Descans anual:</strong> Almenys 31 dies de descans dins d'un període de 12 mesos. En el nostre cas el mes d'agost és de descans, amb el que ja es compliria.</li>
             </ul>
-            <h4>Ampliacions de jornada (només en places itinerants)</h4>
-            <p>En cas de necessitats excepcionals i per acord entre les parts, es pot ampliar l'horari fent-ho constar al sBID. L'excés d'hores s'ha de compensar. Les hores que superin la jornada ordinària no poden superar, en conjunt, el 5% de la durada total de l'acord formatiu.</p>
           
             <h3>3. Revisar les condicions en relació a la Seguretat Social</h3>
             <blockquote>Una persona becària té una relació assimilada a la d'un treballador per compte aliè segons l'art. 1 del RD 1493/2011 de 24 d'octubre.</blockquote>
@@ -171,68 +182,65 @@
             <p>Abans de formalitzar l'acord, el centre i l'empresa han d'establir un <strong>conveni de col·laboració</strong>, vàlid durant 4 anys. Després de tenir el conveni signat digitalment, es pot donar pas a la creació de l'acord i el pla d'activitats. Hi ha exemples dels models al final d'aquesta pàgina.</p>
 
             <h3>6. Donar d'alta l'alumnat becari a la Seguretat Social</h3>
-            <p>Els becaris estan assimilats al Règim General de la Seguretat Social:</p>
-            <ul>
-                <li>Si l’empresa no té treballadors, Alta amb <strong>TA-6</strong>.</li>
-                <li>Si l’empresa ja té treballadors, Alta amb <strong>TA-7</strong>, nou compte de cotització per a becaris. Codi de compte secundari TRL 986 i col·lectiu específic (9939 Pràctiques formatives remunerades).</li>
-            </ul>
-            <div class="warning-box">
-                <p><strong>Important:</strong> la data d’alta a la Seguretat Social ha de concordar amb la data d’inici de l’acord formatiu (ref. 05) generat a través del qBID Dual.</p>
-            </div>
-            <blockquote>Cap alumne no pot iniciar una estada de formació dual en una entitat abans que les parts signin el conveni i l'acord formatiu individual corresponents, ni abans que es facin les gestions davant la Seguretat Social i, si escau, l'administració laboral, d'acord amb la normativa vigent.</blockquote>
-            <p>Quan es fa l’acord, la data de finalització és aproximada, ja que normalment no podem saber amb un any el moment de la seva avaluació. En arribar a les 1000 hores l’alumne ja tindrà les hores suficients, amb el que l’acord ja s’hauria de tancar. L’alumne no pot ser avaluat sense resoldre tota la documentació i per tant no ho podem fer si l’acord està vigent.</p>
-            <p>Immediatament després de l’avaluació, l’alumne pot ser contractat per l’empresa en la modalitat de contracte formatiu en pràctiques.</p>
-
+            <p>Els becaris estan assimilats al Règim General. Si l'empresa no té treballadors, l'alta és amb el <a href="https://www.seg-social.es/wps/portal/wss/internet/Empresarios/Inscripcion/10929/31193" target="_blank" rel="noopener noreferrer">Model TA-6</a>. Si ja té treballadors, s'ha de fer amb el model TA-7, creant un nou compte de cotització per a becaris (codi TRL 986, col·lectiu 9939 Pràctiques formatives remunerades).</p>
+            <blockquote>Cap alumne no pot iniciar una estada de formació dual en una entitat abans que les parts signin el conveni i l'acord formatiu individual corresponents, ni abans que es facin les gestions davant la Seguretat Social.</blockquote>
+            <p>La data de finalització a l'acord és aproximada. En arribar a les 1000 hores, l'acord s'hauria de tancar per poder avaluar l'alumne. Immediatament després, l'alumne pot ser contractat per l'empresa amb un **contracte formatiu per a l'obtenció de la pràctica professional**.</p>
+            
             <h3>7. Gestionar administrativament la relació en beca</h3>
             <h4>7.1 Gestió econòmica i a la Seguretat Social</h4>
-            <p>Al ser una relació formativa i no laboral no està regulada per l'Estatut dels Treballadors, ni pel conveni col·lectiu de l'empresa. L'import de la beca el fixa la comissió de seguiment del conveni. En qualsevol cas, no pot ser inferior en els cicles formatius de grau mitjà al 50% del Salari Mínim Interprofessional de l'any de la signatura de la Beca. En els cicles de grau superior serà el 60% durant la primera meitat de l'estada a l'empresa i al 70% al llarg de la segona meitat formativa. A l'Escola Industrial el primer període comença aproximadament al Juny i finalitza el 31 de desembre. L'empresa pot optar en grau superior per un 65% durant tota la durada. Aquesta és la nostra recomanació.</p>
-            <p>L'alumnat aprenent ha de rebre mensualment aquesta compensació, recollit en un rebut expedit per l'empresa. En el rebut ha de constar la percepció, les cotitzacions a la Seguretat Social i si s'escau, la retenció d'IRPF.</p>
-            <blockquote>Càlcul del preu/hora de la beca (exemple amb 1750h anuals de conveni):<br>
-            SMI ANUAL vigent 2024: 16.576€ (1.184x14 pagues prorratejades)<br>
-            Preu hora = 16.576€ / 1.750h = 9.47 €/hora</blockquote>
+            <p>L'import de la beca no pot ser inferior a un percentatge de l'SMI, tal com regula la <a href="https://dogc.gencat.cat/ca/document-del-dogc/?documentId=991073" target="_blank" rel="noopener noreferrer">RESOLUCIÓ EDU/2717/2024</a>:</p>
             <ul>
-                <li><strong>Grau Mitjà (50%):</strong> 4,74 €/hora.</li>
-                <li><strong>Grau Superior (65% recomanat):</strong> 6,16 €/hora.</li>
+                <li><strong>Grau Mitjà:</strong> 50% de l'SMI.</li>
+                <li><strong>Grau Superior:</strong> 60% la primera meitat, 70% la segona. Es recomana un 65% constant.</li>
             </ul>
             <a href="https://script.google.com/a/macros/escolaindustrial.org/s/AKfycbwTcgXhO5hfWw_bRbGXUSuMCvYiW8pCP_rHX9JOthdhxnbGfdRNuf0iA4V7z12VC_FrDA/exec" target="_blank" rel="noopener noreferrer" class="cta-button">Calculadora Interactiva de Costos</a>
             
             <div class="warning-box">
-                <h4>Exemple de Costos de Seguretat Social (Base 2024)</h4>
-                <p><strong>Important:</strong> Aquestes dades són una referència del 2024. La normativa canvia i recomanem verificar sempre aquests imports amb la vostra gestoria.</p>
-                <strong>Per l'empresa (cost mensual aproximat):</strong>
-                <ul>
-                    <li>Per contingències comunes: 53,61 € (Bonificat 95% -> 2,68€)</li>
-                    <li>Per AT i MP: 7,38 €</li>
-                    <li><strong>Total Empresa: ~10,06 € / mes</strong></li>
-                </ul>
-                <strong>Per al becari (descomptat de la beca):</strong>
-                <ul>
-                     <li>Contingències comunes: 10,69 € (Bonificat 95% -> 0,53€)</li>
-                     <li><strong>Total Alumne: ~0,53 € / mes</strong></li>
-                </ul>
+                <h4>Costos de Seguretat Social (Base 2024)</h4>
+                <p><strong>Important:</strong> Aquestes dades són una referència. Recomanem verificar sempre aquests imports amb la vostra gestoria.</p>
+                <table class="costs-table">
+                    <thead>
+                        <tr>
+                            <th>Concepte</th>
+                            <th>Empresa</th>
+                            <th>Alumne/a</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Contingències Comunes</strong></td>
+                            <td>53,61 €/mes<br><em>Reducció 95%:</em> <strong>2,68 €/mes</strong></td>
+                            <td>10,69 €/mes<br><em>Reducció 95%:</em> <strong>0,53 €/mes</strong></td>
+                            <td>3,21 €/mes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accidents de Treball i Malalties Professionals</strong><br>(IT + IMS)</td>
+                            <td><strong>7,38 €/mes</strong></td>
+                            <td>---</td>
+                            <td>7,38 €/mes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL MENSUAL APROX.</strong></td>
+                            <td><strong>~10,06 €/mes</strong></td>
+                            <td><strong>~0,53 €/mes</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
             <h4>7.2 Gestionar la Prevenció de Riscos Laborals</h4>
-            <p>Com que la beca no es considera una relació laboral no li és aplicable la Llei de Prevenció de Riscs Laborals, però sí la normativa de seguretat i higiene. L'empresa ha de donar la formació específica i adient al lloc de treball que l'aprenent ocuparà al llarg de la seva estada com si fos un treballador. Per part de l'escola industrial tots els seus alumnes han superat les 35 hores de la unitat formativa de prevenció de riscos laborals. Si és menor d'edat l'empresa haurà d'assegurar-se que no es tracti d'una activitat prohibida segons el Decret de 26 de juliol de 1957.</p>
+            <p>L'empresa ha de donar la formació en PRL específica del lloc de treball. Tots els nostres alumnes han superat les 35 hores de la unitat formativa de PRL.</p>
             
-            <h4>7.3 Gestionar Baixes, Incapacitat Laboral Transitòria (ILT)</h4>
-            <p>La persona becària té el mateix dret a rebre prestacions per baixa que la resta de treballadors donats d'alta al Règim General de la Seguretat Social. En resum:</p>
-            <ul>
-                <li><strong>Malaltia comuna i accident no laboral:</strong> té dret a rebre prestació un 60% de la base reguladora (des del 4t dia de baixa fins al 20è) i un 75% des del 21è dia en endavant. Per tenir-hi dret es necessita un període de cotització de 180 dies dins dels 5 anys anteriors.</li>
-                <li><strong>Accident de treball, malaltia professional o accident de trànsit:</strong> té dret a rebre prestació des del dia següent a la data de la baixa, un 75% de la base reguladora.</li>
-            </ul>
-            <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10938/36537/36538" target="_blank" rel="noopener noreferrer">Més informació a la web de la Seguretat Social.</a>
+            <h4>7.3 Gestionar Baixes (ILT)</h4>
+            <p>La persona becària té el mateix dret a rebre prestacions per baixa que la resta de treballadors. <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10938/36537/36538" target="_blank" rel="noopener noreferrer">Més informació a la web de la Seguretat Social.</a></p>
 
             <h3>8. Incidències durant la beca formativa</h3>
-            <p>Ambdós tutors, el del centre i el de l'empresa han de mantenir un diàleg constant i positiu per prevenir i evitar situacions de conflicte. Si apareixen, convé trobar una solució el més aviat possible. Encara que cal evitar-ho, és possible que ens trobem amb rescissió de la beca formativa. Cal parlar amb les parts per esbrinar què ha passat. La finalització de la relació implica que l'alumne s'incorporarà a l'activitat ordinària del centre.</p>
-            
+            <p>La comunicació constant entre tutors és clau. En cas de conflicte, es pot rescindir la beca, documentant el procés. L'alumne s'incorporaria de nou al centre.</p>
+
             <h3>9. Finalitzar l'acord formatiu</h3>
-            <h4>Finalització ordinària</h4>
-            <p>El tutor del centre revisa tota la informació i, si tot és correcte, tanca l'acord formatiu i avalua el quadern de forma coordinada amb el tutor d'empresa. En el moment de l'avaluació final es pot aplicar, per acord de la junta d'avaluació, el reconeixement com a màxim del 5% de les hores no realitzades.</p>
-            <h4>I si l'alumne abandona l'estada?</h4>
-            <p>Si l'aprenent decideix unilateralment abandonar l'estada, les parts implicades (centre, empresa i alumne) signen el document de rescissió de l'acord beca. L'alumne es pot incorporar a l'activitat ordinària del centre.</p>
-            <h4>I després?</h4>
-            <p>Si l'empresa formalitza el contracte indefinit a l'alumne, no es té dret a l'incentiu sobre les quotes empresarials de la Seguretat Social dels tres primers anys; això només s'aconsegueix amb el contracte de formació i alternança. Sí que es podria fer un contracte formatiu per a l'obtenció de la pràctica professional, encara que s'ha complicat molt respecte al contracte de pràctiques que es feia en el passat.</p>
+            <p>En acabar l'estada, els tutors tanquen l'acord i l'avaluen. Si l'empresa contracta l'alumne de forma indefinida, **no tindrà dret a l'incentiu** de 1.500€/1.800€, ja que aquest només s'aplica si la relació prèvia era un contracte de formació. Sí que es podria fer un **contracte formatiu per a l'obtenció de la pràctica professional**.</p>
         </section>
         
         <section id="documents">
@@ -252,4 +260,3 @@
     </div>
 </body>
 </html>
-
