@@ -170,7 +170,7 @@
         .family-card li:last-child {
             border-bottom: none;
         }
-        .cycle-link {
+        .cycle-link, .guide-link {
             background-color: var(--primary-color);
             color: white;
             padding: 5px 10px;
@@ -181,8 +181,15 @@
             white-space: nowrap;
             margin-left: 10px;
         }
-        .cycle-link:hover {
+        .cycle-link:hover, .guide-link:hover {
             background-color: #003d6b;
+        }
+        .guide-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-size: 0.9em;
+            padding: 10px;
         }
         .no-dual-note {
             font-size: 0.8em;
@@ -483,11 +490,12 @@
                         <h3>🎓 Opció Beca</h3>
                         <ul>
                             <li><strong>Relació:</strong> No és un contracte laboral. L'alumne no pot substituir un treballador i el rol del tutor d'empresa té més pes.</li>
-                            <li><strong>Cost per a l'empresa:</strong> S'abona una "ajuda a l'estudi", no un sou. L'import mínim depèn del Salari Mínim (SMI) i del tipus de cicle (aprox. 4,74 €/h per a GM i 6,16 €/h per a GS, a data de 2025).</li>
+                            <li><strong>Cost per a l'empresa:</strong> S'abona una "ajuda a l'estudi", no un sou. L'import mínim depèn del Salari Mínim (SMI) i del tipus de cicle.</li>
                             <li><strong>Bonificacions:</strong> L'alta a la Seguretat Social està <strong>bonificada al 95%</strong>.</li>
                             <li><strong>Contractació posterior:</strong> No hi ha <strong>cap incentiu</strong> addicional per a l'empresa si decideix contractar l'alumne en finalitzar la beca.</li>
                             <li><strong>Limitacions:</strong> No es pot formalitzar una beca si l'alumne ja ha tingut un contracte previ amb la mateixa empresa.</li>
                         </ul>
+                        <a href="guia_beca.html" class="guide-link">Consulta la Guia Completa de la Beca</a>
                     </div>
                 </div>
 
